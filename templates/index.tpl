@@ -1,33 +1,3 @@
-{*  To modify and rearrange content blocks in your storefront pages
-    or change the page structure, use the layout editor under Design->Layouts
-    in your admin panel.
-
-    There, you can:
-
-    * modify the page layout
-    * make it fluid or static
-    * set the number of columns
-    * add, remove, and move blocks
-    * change block templates and types and more.
-
-    You only need to edit a .tpl file to create a new template
-    or modify an existing one; often, this is not the case.
-
-    Basic layouting concepts:
-
-    This theme uses the Twitter Bootstrap 3.3.5 CSS framework.
-
-    A layout consists of four containers (CSS class .container):
-    TOP PANEL, HEADER, CONTENT, and FOOTER.
-
-    Containers are partitioned with fixed-width grids (CSS classes .span1, .span2, etc.).
-
-    Content blocks live inside grids. You can drag'n'drop blocks
-    from grid to grid in the layout editor.
-
-    A block represents a certain content type (e.g. products)
-    and uses a certain template to display it (e.g. list with thumbnails).
-*}
 <!DOCTYPE html>
 <html {hook name="index:html_tag"}{/hook} lang="{$smarty.const.CART_LANGUAGE}" dir="{$language_direction}">
 <head>
@@ -58,6 +28,9 @@ window.onerror = function(errorMessage) {
 {/if}
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.9/es5-shim.min.js"></script><![endif]-->
 {hook name="index:head_scripts"}{/hook}
+
+	<link rel="stylesheet" href="/design/themes/bfa/css/bfa.min.css">
+
 </head>
 
 <body class="dispatch-{$runtime.controller}-{$runtime.mode}{if $runtime.action}-{$runtime.action}{/if}">
